@@ -38,7 +38,7 @@ def HandleClient(conn, addr):
                 connection.send(grid)
         except ConnectionResetError:
             print(f"[{addr}] Disconnected")
-            
+
             break
 
     connections.remove(conn)

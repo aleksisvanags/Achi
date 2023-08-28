@@ -37,7 +37,7 @@ def Placement(x, y):
         else:
             AchiCommonVariables.grid[r][c] = 1
             AchiCommonVariables.bPieces -= 1
-    
+
         AchiCommonVariables.turn = not AchiCommonVariables.turn
         AchiCommonVariables.grid[3][0] = AchiCommonVariables.turn
 
