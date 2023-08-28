@@ -38,6 +38,10 @@ grid = [[2, 2, 2],
 
 
 def main():
+    """
+    This funtion initialises variables and contains the main
+    loop for the program.
+    """
     pygame.init()
     pygame.font.init()
 
@@ -91,6 +95,7 @@ def main():
 
 
 def DrawBoard(win):
+    """This funtion draws the tiles and grid onto the display surface."""
     win.fill(BLACK)
 
     for r in range(ROWS):
@@ -110,6 +115,7 @@ def DrawBoard(win):
 
 
 def CheckWin():
+    """This funtion checks if either player has won."""
     if grid[0][0] == grid[0][1] == grid[0][2] != 2:
         return True
     if grid[1][0] == grid[1][1] == grid[1][2] != 2:
@@ -131,10 +137,12 @@ def CheckWin():
 
 
 def Send(msg):
+    """This function sends the users move to the server."""
     client.send(msg.encode(FORMAT))
 
 
 def RecieveBoard():
+    """This function recieves the board state from the server."""
     while True:
         global grid
 
