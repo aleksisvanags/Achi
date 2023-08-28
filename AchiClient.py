@@ -36,6 +36,7 @@ grid = [[2, 2, 2],
         [2, 2, 2],
         [2]]
 
+
 def main():
     pygame.init()
     pygame.font.init()
@@ -89,6 +90,7 @@ def main():
 
     pygame.quit()
 
+
 def DrawBoard(win):
     win.fill(BLACK)
 
@@ -103,6 +105,7 @@ def DrawBoard(win):
 
             pygame.draw.rect(win, BLACK, ((r * SQUARE_SIZE) - 1, 0, 2, HEIGHT))
             pygame.draw.rect(win, BLACK, (0, (c * SQUARE_SIZE) - 1, WIDTH, 2))
+
 
 def CheckWin():
     if grid[0][0] == grid[0][1] == grid[0][2] != 2:
@@ -124,8 +127,10 @@ def CheckWin():
 
     return False
 
+
 def Send(msg):
     client.send(msg.encode(FORMAT))
+
 
 def RecieveBoard():
     while True:
@@ -133,6 +138,7 @@ def RecieveBoard():
 
         msg = client.recv(368).decode(FORMAT)
         grid = json.loads(msg)
+
 
 if __name__ == "__main__":
     thread = threading.Thread(target=RecieveBoard)
