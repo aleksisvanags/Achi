@@ -144,7 +144,7 @@ def Send(msg):
 def RecieveBoard():
     """This function recieves the board state from the server."""
     while True:
-        global grid
+        global grid #skipcq
 
         msg = client.recv(368).decode(FORMAT)
         grid = json.loads(msg)
