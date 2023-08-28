@@ -14,9 +14,9 @@ def Process(move):
         AchiCommonVariables.oPieces = 4
         AchiCommonVariables.bPieces = 4
         AchiCommonVariables.grid = [[2, 2, 2],
-                [2, 2, 2],
-                [2, 2, 2],
-                [2]]
+                                    [2, 2, 2],
+                                    [2, 2, 2],
+                                    [2]]
         AchiCommonVariables.turn = True
     else:
         x = move[0]
