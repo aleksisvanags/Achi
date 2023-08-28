@@ -6,6 +6,7 @@ import json
 import AchiCommonVariables
 from math import sqrt
 
+
 def Process(move):
     move = json.loads(move)
 
@@ -26,6 +27,7 @@ def Process(move):
         else:
             Move(move)
 
+
 def Placement(x, y):
     r = x // (AchiCommonVariables.WIDTH // AchiCommonVariables.ROWS)
     c = y // (AchiCommonVariables.HEIGHT // AchiCommonVariables.COLS)
@@ -40,6 +42,7 @@ def Placement(x, y):
 
         AchiCommonVariables.turn = not AchiCommonVariables.turn
         AchiCommonVariables.grid[3][0] = AchiCommonVariables.turn
+
 
 def Move(clickPos):
     emptySquare = [-1, -1]
