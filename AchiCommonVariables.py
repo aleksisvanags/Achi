@@ -1,6 +1,6 @@
 # AchiCommonVariables
 # Aleksis Vanags
-# 26/08/2023
+# 26/08/2023 - 27/08/2023
 
 WIDTH = 420
 HEIGHT = 420
