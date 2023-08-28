@@ -22,7 +22,8 @@ def Process(move):
         x = move[0]
         y = move[1]
 
-        if (AchiCommonVariables.turn and (AchiCommonVariables.oPieces > 0)) or ((not AchiCommonVariables.turn) and (AchiCommonVariables.bPieces > 0)):
+        if (AchiCommonVariables.turn and (AchiCommonVariables.oPieces > 0)) or
+        ((not AchiCommonVariables.turn) and (AchiCommonVariables.bPieces > 0)):
             Placement(x, y)
         else:
             Move(move)
@@ -55,12 +56,14 @@ def Move(clickPos):
                 emptySquare = [row, col]
 
     if AchiCommonVariables.turn and (AchiCommonVariables.grid[r][c] == 0):
-        if (emptySquare == [1, 1]) or (r == c == 1) or (sqrt(((r - emptySquare[0]) ** 2) + ((c - emptySquare[1]) ** 2)) == 1):
+        if (emptySquare == [1, 1]) or (r == c == 1) or (sqrt(((r - emptySquare[0]) ** 2)
+                                                             + ((c - emptySquare[1]) ** 2)) == 1):
             AchiCommonVariables.grid[emptySquare[0]][emptySquare[1]] = 0
             AchiCommonVariables.grid[r][c] = 2
             AchiCommonVariables.turn = not AchiCommonVariables.turn
     elif (not AchiCommonVariables.turn) and (AchiCommonVariables.grid[r][c] == 1):
-        if (emptySquare == [1, 1]) or (r == c == 1) or (sqrt(((r - emptySquare[0]) ** 2) + ((c - emptySquare[1]) ** 2)) == 1):
+        if (emptySquare == [1, 1]) or (r == c == 1) or (sqrt(((r - emptySquare[0]) ** 2)
+                                                             + ((c - emptySquare[1]) ** 2)) == 1):
             AchiCommonVariables.grid[emptySquare[0]][emptySquare[1]] = 1
             AchiCommonVariables.grid[r][c] = 2
             AchiCommonVariables.turn = not AchiCommonVariables.turn
