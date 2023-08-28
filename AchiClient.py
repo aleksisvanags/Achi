@@ -107,22 +107,21 @@ def DrawBoard(win):
 def CheckWin():
     if grid[0][0] == grid[0][1] == grid[0][2] != 2:
         return True
-    elif grid[1][0] == grid[1][1] == grid[1][2] != 2:
+    if grid[1][0] == grid[1][1] == grid[1][2] != 2:
         return True
-    elif grid[2][0] == grid[2][1] == grid[2][2] != 2:
+    if grid[2][0] == grid[2][1] == grid[2][2] != 2:
         return True
-    elif grid[0][0] == grid[1][0] == grid[2][0] != 2:
+    if grid[0][0] == grid[1][0] == grid[2][0] != 2:
         return True
-    elif grid[0][1] == grid[1][1] == grid[2][1] != 2:
+    if grid[0][1] == grid[1][1] == grid[2][1] != 2:
         return True
-    elif grid[0][2] == grid[1][2] == grid[2][2] != 2:
+    if grid[0][2] == grid[1][2] == grid[2][2] != 2:
         return True
-    elif grid[0][0] == grid[1][1] == grid[2][2] != 2:
+    if grid[0][0] == grid[1][1] == grid[2][2] != 2:
         return True
-    elif grid[0][2] == grid[1][1] == grid[2][0] != 2:
+    if grid[0][2] == grid[1][1] == grid[2][0] != 2:
         return True
-    else:
-        return False
+    return False
 
 def Send(msg):
     client.send(msg.encode(FORMAT))
