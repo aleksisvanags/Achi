@@ -48,7 +48,7 @@ def main():
 
     while run:
         clock.tick(FPS)
-        
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
@@ -84,7 +84,7 @@ def main():
             winnerScreenFade.blit(winnerText, winnerTextRect)
             winnerScreenFade.blit(resetText, resetTextRect)
             WIN.blit(winnerScreenFade, (0, 0))
-        
+
         pygame.display.update()
 
     pygame.quit()
