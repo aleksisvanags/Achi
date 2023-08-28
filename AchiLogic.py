@@ -58,13 +58,13 @@ def Move(clickPos):
 
     if AchiCommonVariables.turn and (AchiCommonVariables.grid[r][c] == 0):
         if (emptySquare == [1, 1]) or (r == c == 1) or (sqrt(((r - emptySquare[0]) ** 2)
-                                                    + ((c - emptySquare[1]) ** 2)) == 1):
+                                                + ((c - emptySquare[1]) ** 2)) == 1):
             AchiCommonVariables.grid[emptySquare[0]][emptySquare[1]] = 0
             AchiCommonVariables.grid[r][c] = 2
             AchiCommonVariables.turn = not AchiCommonVariables.turn
     elif (not AchiCommonVariables.turn) and (AchiCommonVariables.grid[r][c] == 1):
         if (emptySquare == [1, 1]) or (r == c == 1) or (sqrt(((r - emptySquare[0]) ** 2)
-                                                    + ((c - emptySquare[1]) ** 2)) == 1):
+                                                + ((c - emptySquare[1]) ** 2)) == 1):
             AchiCommonVariables.grid[emptySquare[0]][emptySquare[1]] = 1
             AchiCommonVariables.grid[r][c] = 2
             AchiCommonVariables.turn = not AchiCommonVariables.turn
