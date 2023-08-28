@@ -23,6 +23,7 @@ connections = []
 
 
 def HandleClient(conn, addr):
+    """This function connects each client to the server and handles message traffic."""
     print(f"[NEW CONNECTION] {addr} connected.")
     connections.append(conn)
     conn.send(json.dumps(AchiCommonVariables.grid).encode(FORMAT))
@@ -47,6 +48,10 @@ def HandleClient(conn, addr):
 
 
 def main():
+    """
+    This funtion initialises variables and contains the main
+    loop for the program.
+    """
     server.listen()
     print(f"[LISTENING] Server is listening on {SERVER}")
 
