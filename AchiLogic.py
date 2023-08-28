@@ -8,6 +8,7 @@ from math import sqrt
 
 
 def Process(move):
+    """This function processes the users move and decides what needs to be done next."""
     move = json.loads(move)
 
     if move == "r":
@@ -31,6 +32,7 @@ def Process(move):
 
 
 def Placement(x, y):
+    """This function handles placement of new tiles."""
     r = x // (AchiCommonVariables.WIDTH // AchiCommonVariables.ROWS)
     c = y // (AchiCommonVariables.HEIGHT // AchiCommonVariables.COLS)
 
@@ -47,6 +49,7 @@ def Placement(x, y):
 
 
 def Move(clickPos):
+    """This function handles movement of placed tiles."""
     emptySquare = [-1, -1]
     r = clickPos[0] // (AchiCommonVariables.WIDTH // AchiCommonVariables.ROWS)
     c = clickPos[1] // (AchiCommonVariables.HEIGHT // AchiCommonVariables.COLS)
