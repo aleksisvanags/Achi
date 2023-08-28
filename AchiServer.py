@@ -1,6 +1,6 @@
 # AchiServer
 # Aleksis Vanags
-# 26/08/2023
+# 26/08/2023 - 27/08/2023
 
 import socket
 import threading
