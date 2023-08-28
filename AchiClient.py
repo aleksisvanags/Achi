@@ -96,11 +96,14 @@ def DrawBoard(win):
     for r in range(ROWS):
         for c in range(COLS):
             if grid[r][c] == 0:
-                pygame.draw.rect(win, ORANGE, (r * SQUARE_SIZE, c * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+                pygame.draw.rect(win, ORANGE, (r * SQUARE_SIZE, c * SQUARE_SIZE,
+                                               SQUARE_SIZE, SQUARE_SIZE))
             elif grid[r][c] == 1:
-                pygame.draw.rect(win, BLUE, (r * SQUARE_SIZE, c * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+                pygame.draw.rect(win, BLUE, (r * SQUARE_SIZE, c * SQUARE_SIZE,
+                                             SQUARE_SIZE, SQUARE_SIZE))
             else:
-                pygame.draw.rect(win, WHITE, (r * SQUARE_SIZE, c * SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE))
+                pygame.draw.rect(win, WHITE, (r * SQUARE_SIZE, c * SQUARE_SIZE,
+                                              SQUARE_SIZE, SQUARE_SIZE))
 
             pygame.draw.rect(win, BLACK, ((r * SQUARE_SIZE) - 1, 0, 2, HEIGHT))
             pygame.draw.rect(win, BLACK, (0, (c * SQUARE_SIZE) - 1, WIDTH, 2))
