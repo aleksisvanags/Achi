@@ -42,7 +42,6 @@ def main():
     pygame.font.init()
 
     font = pygame.font.SysFont("Consolas", 32, False, False)
-    WIN = pygame.display.set_mode((WIDTH, HEIGHT))
     clock = pygame.time.Clock()
     run = True
     win = False
