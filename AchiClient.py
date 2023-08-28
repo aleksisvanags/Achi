@@ -121,6 +121,7 @@ def CheckWin():
         return True
     if grid[0][2] == grid[1][1] == grid[2][0] != 2:
         return True
+
     return False
 
 def Send(msg):
