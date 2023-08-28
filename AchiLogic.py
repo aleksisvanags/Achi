@@ -50,9 +50,9 @@ def Move(clickPos):
     c = clickPos[1] // (AchiCommonVariables.HEIGHT // AchiCommonVariables.COLS)
 
     for row in range(AchiCommonVariables.ROWS):
-            for col in range(AchiCommonVariables.COLS):
-                if AchiCommonVariables.grid[row][col] == 2:
-                    emptySquare = [row, col]
+        for col in range(AchiCommonVariables.COLS):
+            if AchiCommonVariables.grid[row][col] == 2:
+                emptySquare = [row, col]
 
     if AchiCommonVariables.turn and (AchiCommonVariables.grid[r][c] == 0):
         if (emptySquare == [1, 1]) or (r == c == 1) or (sqrt(((r - emptySquare[0]) ** 2) + ((c - emptySquare[1]) ** 2)) == 1):
