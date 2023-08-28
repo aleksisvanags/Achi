@@ -21,6 +21,7 @@ server.bind(ADDR)
 
 connections = []
 
+
 def HandleClient(conn, addr):
     print(f"[NEW CONNECTION] {addr} connected.")
     connections.append(conn)
@@ -44,6 +45,7 @@ def HandleClient(conn, addr):
     connections.remove(conn)
     conn.close()
 
+
 def main():
     server.listen()
     print(f"[LISTENING] Server is listening on {SERVER}")
@@ -54,6 +56,7 @@ def main():
 
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
+
 
 if __name__ == "__main__":
     main()
