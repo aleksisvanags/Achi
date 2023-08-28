@@ -22,8 +22,9 @@ def Process(move):
         x = move[0]
         y = move[1]
 
-        if (AchiCommonVariables.turn and (AchiCommonVariables.oPieces > 0)) or
-        ((not AchiCommonVariables.turn) and (AchiCommonVariables.bPieces > 0)):
+        if AchiCommonVariables.turn and (AchiCommonVariables.oPieces > 0):
+            Placement(x, y)
+        elif (not AchiCommonVariables.turn) and (AchiCommonVariables.bPieces > 0):
             Placement(x, y)
         else:
             Move(move)
